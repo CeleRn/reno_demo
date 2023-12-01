@@ -1,0 +1,25 @@
+<odoo>
+    <record model="crm.stage" id="crm.stage_lead1">
+        <field name="name">Opportunity</field>
+        <field name="sequence">1</field>
+    </record>
+    <record model="crm.stage" id="crm.stage_lead2">
+        <field name="name">In progress</field>
+        <field name="sequence">2</field>
+    </record>
+    <record model="crm.stage" id="crm.stage_lead3">
+        <field name="name">Appointment scheduled</field>
+        <field name="sequence">3</field>
+    </record>
+
+    <record model="crm.stage" id="stage_lead5">
+        <field name="name">Proforma sent</field>
+        <field name="sequence">4</field>
+    </record>
+    <record model="crm.stage" id="crm.stage_lead4">
+        <field name="name">Pre-payment received (won)</field>
+        <field name="fold" eval="False"/>
+        <field name="is_won">True</field>
+        <field name="sequence">70</field>
+    </record>
+</odoo>

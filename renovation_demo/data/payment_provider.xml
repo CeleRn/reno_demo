@@ -1,0 +1,6 @@
+<odoo>
+    <record id="payment.payment_provider_demo" model="payment.provider">
+        <field name="state">test</field>
+        <field name="is_published" eval="True" />
+    </record>
+</odoo>

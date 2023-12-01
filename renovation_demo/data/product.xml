@@ -1,0 +1,15 @@
+<odoo>
+    <record id="product_service_deliver_timesheet_2" model="product.product">
+            <field name="name">Prepare services</field>
+            <field name="categ_id" ref="product.product_category_3"/>
+            <field name="list_price">100.00</field>
+            <field name="standard_price">85.00</field>
+            <field name="type">service</field>
+            <field name="uom_id" ref="uom.product_uom_hour"/>
+            <field name="uom_po_id" ref="uom.product_uom_hour"/>
+            <field name="service_policy">delivered_timesheet</field>
+            <!-- <field name="service_policy">ordered_prepaid</field> -->
+            <field name="service_tracking">task_in_project</field>
+            <field name="project_template_id" ref="so_template_project"/>
+        </record>
+</odoo>

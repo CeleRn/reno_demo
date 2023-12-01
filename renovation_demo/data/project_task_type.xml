@@ -1,0 +1,10 @@
+<odoo>
+    <record id="project_stage_backlog" model="project.task.type">
+        <field name="sequence">5</field>
+        <field name="name">Backlog</field>
+    </record>
+    <record id="project_stage_delivered" model="project.task.type">
+        <field name="sequence">15</field>
+        <field name="name">Delivered</field>
+    </record>
+</odoo>

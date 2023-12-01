@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <!-- We want to activate SO template by default for easier demoing. -->
+
+        <record id="sale_order_template_1" model="sale.order.template">
+            <field name="name">Start project</field>
+            <field name="number_of_days">30</field>
+        </record>
+
+        <record id="sale_order_template_line_1" model="sale.order.template.line">
+            <field name="sale_order_template_id" ref="sale_order_template_1"/>
+            <field name="name">Prepare services</field>
+            <field name="product_id" ref="product_service_deliver_timesheet_2"/>
+            <field name="product_uom_qty">15</field>
+            <field name="product_uom_id" ref="uom.product_uom_hour"/>
+        </record>
+
+</odoo>

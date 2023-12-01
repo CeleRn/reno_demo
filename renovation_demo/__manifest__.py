@@ -1,0 +1,41 @@
+{
+    'name' : 'Renovation Demo data',
+    'version': '1.0',
+    'category': 'Hidden',
+    'description': "",
+    'depends': [
+        'base',
+        'web',
+        'website',
+        'muk_web_theme',
+        'sale_management',
+        'project',
+        'purchase',
+        'stock',
+        'account',
+        'hr_timesheet',
+        'crm',
+        'sale_timesheet',
+        'payment_demo',
+        'l10n_us'
+    ],
+    'data': [
+        'data/res_group.xml',
+        'data/res_users.xml',
+        'data/project_task_type.xml',
+        'data/project.xml',
+        'data/product.xml',
+        'data/sale_order_template.xml',
+        'data/project_task.xml',
+        'data/website_menu.xml',
+        'data/crm_stage.xml',
+        'data/payment_provider.xml',
+        'views/crm_lead.xml',
+        'data/website_page.xml'
+    ],
+    'installable': True,
+    'auto_install': False,
+    'assets': {
+    },
+    'license': 'LGPL-3',
+}

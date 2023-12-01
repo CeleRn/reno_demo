@@ -1,0 +1,29 @@
+<odoo>
+     <record id="project_task_prepare" model="project.task">
+        <field name="name">Preparing</field>
+        <field name="project_id" ref="renovation_demo.so_template_project"/>
+        <field name="stage_id" ref="renovation_demo.project_stage_backlog"/>
+    </record>
+    <record id="project_task_pull_permits" model="project.task">
+        <field name="name">Pull permits</field>
+        <field name="project_id" ref="renovation_demo.so_template_project"/>
+        <field name="stage_id" ref="renovation_demo.project_stage_backlog"/>
+        <field name="user_ids" eval="[Command.link(ref('renovation_demo.user_manager_1'))]"/>
+        <field name="parent_id" ref="renovation_demo.project_task_prepare" />
+    </record>
+    <record id="project_task_3d_design" model="project.task">
+        <field name="name">3d design</field>
+        <field name="project_id" ref="renovation_demo.so_template_project"/>
+        <field name="stage_id" ref="renovation_demo.project_stage_backlog"/>
+        <field name="user_ids" eval="[Command.link(ref('renovation_demo.user_project_manager_1'))]"/>
+        <field name="parent_id" ref="renovation_demo.project_task_prepare" />
+    </record>
+
+    <record id="project_task_sign_contract" model="project.task">
+        <field name="name">Sign contract</field>
+        <field name="project_id" ref="renovation_demo.so_template_project"/>
+        <field name="stage_id" ref="renovation_demo.project_stage_backlog"/>
+        <field name="user_ids" eval="[Command.link(ref('renovation_demo.user_sale_1'))]"/>
+        <field name="depend_on_ids" eval="[(4, ref('renovation_demo.project_task_prepare'))]" />
+    </record>
+</odoo>

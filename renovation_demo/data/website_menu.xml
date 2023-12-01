@@ -1,0 +1,8 @@
+<odoo>
+    <record id="menu_utm" model="website.menu">
+        <field name="name">From Facebook</field>
+        <field name="url">/contactus?utm_source=facebook&amp;utm_medium=cpc&amp;utm_campaign=paid_cristmass</field>
+        <field name="parent_id" ref="website.main_menu"/>
+        <field name="sequence" type="int">150</field>
+    </record>
+</odoo>

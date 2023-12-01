@@ -1,0 +1,17 @@
+<odoo>
+    <record id="crm_lead_view_form" model="ir.ui.view">
+        <field name="name">crm.lead.form.inherit.interest</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_lead_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="before">
+                <group col="2">
+                    <!-- <field name="appointment_date" attrs="{'required': [('stage_id', '!=', 1))]}"/>
+                    <field name="interest" attrs="{'required': [('stage_id', '!=', 1)]}"/> -->
+                    <field name="appointment_date" attrs="{'required': [('stage_id', '!=', %(crm.stage_lead1)d)]}"/>
+                    <field name="interest" attrs="{'required': [('stage_id', '!=', %(crm.stage_lead1)d)]}"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,10 @@
+<odoo>
+<record id="so_template_project" model="project.project">
+    <field name="name">Start service project</field>
+    <field name="active">False</field>
+    <field name="type_ids" eval="[Command.link(ref('renovation_demo.project_stage_backlog')), Command.link(ref('project.project_stage_1')), Command.link(ref('renovation_demo.project_stage_delivered')), Command.link(ref('project.project_stage_2'))]"/>
+    <field name="description">This project is used as a template for projects created from sales orders.</field>
+    <field name="allow_subtasks" eval="True" />
+    <field name="allow_task_dependencies" eval="True" />
+</record>
+</odoo>

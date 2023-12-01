@@ -1,0 +1,52 @@
+<odoo>
+    <record id="partner_sale_1" model="res.partner">
+        <field name="name">Sale1</field>
+        <field name="company_id" ref="base.main_company"/>
+        <field name="email">sale@example.com</field>
+    </record>
+
+    <record id="user_sale_1" model="res.users">
+        <field name="login">sale1</field>
+        <field name="password">1</field>
+        <field name="partner_id" ref="renovation_demo.partner_sale_1"/>
+        <field name="company_id" ref="base.main_company"/>
+        <field name="company_ids" eval="[Command.link(ref('base.main_company'))]"/>
+        <field name="groups_id" eval="[Command.link(ref('base.group_user'))]"/>
+        <field name="signature"><![CDATA[<span>-- <br/>
+Sale1</span>]]></field>
+    </record>
+
+    <record id="partner_manager_1" model="res.partner">
+        <field name="name">Manager1</field>
+        <field name="company_id" ref="base.main_company"/>
+        <field name="email">sale@example.com</field>
+    </record>
+
+    <record id="user_manager_1" model="res.users">
+        <field name="login">manager1</field>
+        <field name="password">1</field>
+        <field name="partner_id" ref="renovation_demo.partner_manager_1"/>
+        <field name="company_id" ref="base.main_company"/>
+        <field name="company_ids" eval="[Command.link(ref('base.main_company'))]"/>
+        <field name="groups_id" eval="[Command.link(ref('base.group_user'))]"/>
+        <field name="signature"><![CDATA[<span>-- <br/>
+Manager1</span>]]></field>
+    </record>
+
+    <record id="partner_project_manager_1" model="res.partner">
+        <field name="name">Project Manager 1</field>
+        <field name="company_id" ref="base.main_company"/>
+        <field name="email">sale@example.com</field>
+    </record>
+
+    <record id="user_project_manager_1" model="res.users">
+        <field name="login">projectmanager1</field>
+        <field name="password">1</field>
+        <field name="partner_id" ref="renovation_demo.partner_project_manager_1"/>
+        <field name="company_id" ref="base.main_company"/>
+        <field name="company_ids" eval="[Command.link(ref('base.main_company'))]"/>
+        <field name="groups_id" eval="[Command.link(ref('base.group_user'))]"/>
+        <field name="signature"><![CDATA[<span>-- <br/>
+Manager1</span>]]></field>
+    </record>
+</odoo>
